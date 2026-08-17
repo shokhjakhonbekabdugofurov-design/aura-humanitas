@@ -13,7 +13,7 @@
   const thumb=['one','two','three','four','five','six'];
 
   async function load(){
-    const issueRes=await sb.from('issues').select('id,volume,issue_number,issue_date,title,description,cover_path,full_issue_pdf_path,published').eq('published',true).gte('issue_date','2026-01-01').order('issue_date',{ascending:false}).limit(1).maybeSingle();
+    const issueRes=await sb.from('issues').select('id,volume,issue_number,issue_date,title,description,cover_path,full_issue_pdf_path,published').eq('published',true).order('issue_date',{ascending:false}).limit(1).maybeSingle();
     if(issueRes.error){ console.error('Current issue load failed:', issueRes.error); return; }
     if(!issueRes.data) return;
     const issue=issueRes.data;
@@ -78,7 +78,7 @@
 
     const archiveList=document.querySelector('.archive-list');
     if(archiveList){
-      const allRes=await sb.from('issues').select('id,volume,issue_number,issue_date,title,description,cover_path,full_issue_pdf_path,published').eq('published',true).gte('issue_date','2026-01-01').order('issue_date',{ascending:false});
+      const allRes=await sb.from('issues').select('id,volume,issue_number,issue_date,title,description,cover_path,full_issue_pdf_path,published').eq('published',true).order('issue_date',{ascending:false});
       if(!allRes.error){
         const all=allRes.data||[];
         archiveList.innerHTML=all.length ? all.map(x=>`<div class="archive-row">

@@ -334,10 +334,7 @@ footer p{font-size:11px;color:#bcb4a9;max-width:390px}
   .footer{grid-template-columns:1fr}
 }
 </style>
-<style id="AURA_SUBMISSION_CSS">
-#submissionModal{display:none;position:fixed;inset:0;z-index:9999;background:rgba(39,37,34,.62);padding:30px 18px;overflow:auto}
-#submissionModal.open{display:flex;align-items:flex-start;justify-content:center}.submission-dialog{width:min(920px,100%);background:#fffdf9;border:1px solid #ddd5c8;box-shadow:0 24px 80px rgba(0,0,0,.22);margin:auto}.submission-head{padding:26px 30px 20px;border-bottom:1px solid #ddd5c8;display:flex;justify-content:space-between}.submission-head h2{margin:4px 0;font-family:"Playfair Display",serif}.submission-close{border:0;background:transparent;font-size:28px;cursor:pointer}.submission-body{padding:28px 30px}.submission-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.submission-field{display:flex;flex-direction:column;gap:7px}.submission-field.full{grid-column:1/-1}.submission-field label{font-weight:600;font-size:13px}.submission-field input,.submission-field select,.submission-field textarea{width:100%;box-sizing:border-box;border:1px solid #ddd5c8;background:#fff;padding:12px;border-radius:2px;font:inherit}.submission-field textarea{min-height:130px}.submission-note,.submission-checks{background:#f6f1e8;padding:14px;margin-bottom:20px}.submission-check{padding:5px 0}.submission-check.ok{color:#41634b}.submission-check.warn{color:#8a6338}.submission-check.bad{color:#9b3d32}.submission-actions{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}.submission-status{font-size:14px;color:#716b63}@media(max-width:700px){.submission-grid{grid-template-columns:1fr}.submission-field.full{grid-column:auto}.submission-head,.submission-body{padding:20px}}
-</style></head>
+</head>
 
 <body>
 
@@ -358,8 +355,8 @@ footer p{font-size:11px;color:#bcb4a9;max-width:390px}
 
     <div class="nav-actions">
       <div class="auth-links" aria-label="Account">
-        <a class="auth-link" href="auth/index.html#login">Sign In</a>
-        <a class="auth-link register" href="auth/index.html#register">Register</a>
+        <a class="auth-link" href="/auth/index.html#login">Sign In</a>
+        <a class="auth-link register" href="/auth/index.html#register">Register</a>
       </div>
       <div class="search">⌕ <input id="searchInput" placeholder="Search articles"></div>
       <select class="lang" aria-label="Language">
@@ -394,7 +391,7 @@ footer p{font-size:11px;color:#bcb4a9;max-width:390px}
 
       <div class="buttons">
         <a class="btn" href="#issue">View Current Issue →</a>
-        <a class="btn light" href="#submit" onclick="openSubmission(event)">Submit an Article</a>
+        <a class="btn light" href="#authors">Submit an Article</a>
       </div>
     </div>
 
@@ -538,8 +535,20 @@ footer p{font-size:11px;color:#bcb4a9;max-width:390px}
 
     <div class="archive-list">
       <div class="archive-row">
-        <div><h3>Volume XII · 2026</h3><p>Active publication year · Current issues</p></div>
+        <div><h3>Volume XII · 2026</h3><p>Issues 1–8 · Current publication year</p></div>
         <span class="badge">2026</span>
+      </div>
+      <div class="archive-row">
+        <div><h3>Volume XI · 2025</h3><p>Previous annual volume</p></div>
+        <span class="badge">2025</span>
+      </div>
+      <div class="archive-row">
+        <div><h3>Volume X · 2024</h3><p>Previous annual volume</p></div>
+        <span class="badge">2024</span>
+      </div>
+      <div class="archive-row">
+        <div><h3>Volume IX · 2023</h3><p>Previous annual volume</p></div>
+        <span class="badge">2023</span>
       </div>
     </div>
   </div>
@@ -598,21 +607,21 @@ footer p{font-size:11px;color:#bcb4a9;max-width:390px}
         <div class="avatar">EI</div>
         <h3>Editor-in-Chief</h3>
         <div class="role">Editor-in-Chief</div>
-        <p>The Editor-in-Chief provides academic leadership, safeguards editorial independence, oversees peer-review standards, and makes final publication decisions in accordance with the journal's editorial and ethical policies.</p>
+        <p>Replace this text with the editor's full name, academic degree, affiliation, and research interests.</p>
       </div>
 
       <div class="person">
         <div class="avatar">ME</div>
         <h3>Managing Editor</h3>
         <div class="role">Managing Editor</div>
-        <p>The Managing Editor coordinates manuscript handling, communication with authors and reviewers, editorial scheduling, issue preparation, metadata quality, and the day-to-day operation of the journal.</p>
+        <p>Replace this text with the managing editor's professional and institutional information.</p>
       </div>
 
       <div class="person">
         <div class="avatar">EB</div>
         <h3>Editorial Board</h3>
         <div class="role">Board Member</div>
-        <p>Editorial Board members contribute subject expertise, advise on editorial policy, support peer-review quality, disclose conflicts of interest, and help maintain academic integrity and publication standards.</p>
+        <p>Add scholars, affiliations, ORCID identifiers, and areas of expertise here.</p>
       </div>
     </div>
   </div>
@@ -630,19 +639,19 @@ footer p{font-size:11px;color:#bcb4a9;max-width:390px}
     <div class="author-grid">
       <div class="guideline">
         <div class="number">01</div>
-        <div><h3>Manuscript Preparation</h3><p>Prepare an original manuscript with a clear title, author information, abstract, keywords, main text, references, and any necessary tables or figures. Submit the manuscript in Microsoft Word format so the editorial office can process it efficiently.</p></div>
+        <div><h3>Manuscript Preparation</h3><p>Provide your manuscript requirements, formatting rules, abstract length, keywords, tables, figures, and references.</p></div>
       </div>
       <div class="guideline">
         <div class="number">02</div>
-        <div><h3>Submission</h3><p>Submit the required author and manuscript information through the online submission form and upload the manuscript in Microsoft Word format. Authors should provide accurate contact and affiliation details and ensure that the submitted file is the correct version.</p></div>
+        <div><h3>Submission</h3><p>Add your manuscript submission email, online submission system, or editorial office instructions.</p></div>
       </div>
       <div class="guideline">
         <div class="number">03</div>
-        <div><h3>Peer Review</h3><p>Submissions are assessed by the editorial office for scope, completeness, originality, and academic suitability before peer review. Suitable manuscripts are evaluated by qualified reviewers, and editorial decisions are based on the scholarly quality and relevance of the work.</p></div>
+        <div><h3>Peer Review</h3><p>Describe your journal's peer-review model, reviewer selection, evaluation criteria, and decision process.</p></div>
       </div>
       <div class="guideline">
         <div class="number">04</div>
-        <div><h3>Publication Ethics</h3><p>Authors are responsible for originality, proper attribution, accurate authorship, disclosure of conflicts of interest, and research integrity. The journal follows recognized publication-ethics principles and may request corrections, clarifications, or revisions when necessary.</p></div>
+        <div><h3>Publication Ethics</h3><p>Add your policies on plagiarism, authorship, conflicts of interest, research integrity, and corrections.</p></div>
       </div>
     </div>
   </div>
@@ -662,7 +671,6 @@ footer p{font-size:11px;color:#bcb4a9;max-width:390px}
       <div class="index-pill">DOI: —</div>
       <div class="index-pill">ORCID</div>
       <div class="index-pill">Crossref</div>
-      <div class="index-pill">Zenodo</div>
       <div class="index-pill">Google Scholar</div>
       <div class="index-pill">Open Access</div>
       <div class="index-pill">Peer Reviewed</div>
@@ -713,7 +721,7 @@ footer p{font-size:11px;color:#bcb4a9;max-width:390px}
         <a href="#authors">Author Guidelines</a>
         <a href="#">Publication Ethics</a>
         <a href="#">Contact Editorial Office</a>
-        <a href="#submit" onclick="openSubmission(event)">Submit Manuscript</a>
+        <a href="#">Submit Manuscript</a>
       </div>
     </div>
   </div>
@@ -724,17 +732,7 @@ footer p{font-size:11px;color:#bcb4a9;max-width:390px}
   </div>
 </footer>
 
-<div class="toast" id="toast"></div><div id="submissionModal" aria-hidden="true"><div class="submission-dialog" role="dialog" aria-modal="true">
-<div class="submission-head"><div><div class="kicker">Editorial Office</div><h2>Submit an Article</h2><p>Submit your manuscript for editorial assessment.</p></div><button class="submission-close" onclick="closeSubmission()" type="button">×</button></div>
-<div class="submission-body"><p class="submission-note">Manuscripts must be submitted as <strong>Microsoft Word (.docx)</strong>. The editorial office receives submissions at <strong>journalaurahumanitas@gmail.com</strong>.</p>
-<form id="submissionForm"><div class="submission-grid">
-<div class="submission-field"><label>Full Name *</label><input id="subFullName" required></div><div class="submission-field"><label>Email *</label><input id="subEmail" type="email" required></div>
-<div class="submission-field"><label>University / Institution *</label><input id="subUniversity" required></div><div class="submission-field"><label>Country *</label><input id="subCountry" required></div>
-<div class="submission-field"><label>Field / Subject *</label><input id="subField" required></div><div class="submission-field"><label>Article Type *</label><select id="subType" required><option value="">Select article type</option><option>Research Article</option><option>Review Article</option><option>Case Study</option><option>Short Communication</option><option>Book Review</option></select></div>
-<div class="submission-field full"><label>Article Title *</label><input id="subTitle" required></div><div class="submission-field full"><label>Abstract *</label><textarea id="subAbstract" required></textarea></div>
-<div class="submission-field full"><label>Keywords *</label><input id="subKeywords" required></div><div class="submission-field full"><label>Manuscript — Microsoft Word (.docx) *</label><input id="subManuscript" type="file" accept=".docx" required><small>Additional manuscript format: Microsoft Word (.docx).</small></div>
-</div>
-<div class="submission-actions"><button class="btn" type="submit" id="submitManuscriptBtn">Submit Manuscript</button><button class="btn light" type="button" onclick="closeSubmission()">Cancel</button><span id="submissionStatus" class="submission-status"></span></div></form></div></div></div>
+<div class="toast" id="toast"></div>
 
 <script>
 function showMessage(message){
@@ -774,101 +772,7 @@ document.getElementById("searchInput").addEventListener("keyup",function(){
 });
 </script>
 
-<script id="AURA_SUBMISSION_JS">
-(function(){
-  let sb=null;
-  function getSB(){
-    const C=window.AURA_CONFIG||{};
-    if(!sb&&C.SUPABASE_URL&&C.SUPABASE_KEY&&window.supabase){
-      sb=window.supabase.createClient(C.SUPABASE_URL,C.SUPABASE_KEY);
-    }
-    return sb;
-  }
-
-  window.openSubmission=function(e){
-    if(e)e.preventDefault();
-    const m=document.getElementById("submissionModal");
-    m.classList.add("open");
-    m.setAttribute("aria-hidden","false");
-    document.body.style.overflow="hidden";
-  };
-
-  window.closeSubmission=function(){
-    const m=document.getElementById("submissionModal");
-    m.classList.remove("open");
-    m.setAttribute("aria-hidden","true");
-    document.body.style.overflow="";
-  };
-
-  document.getElementById("submissionForm").addEventListener("submit",async function(e){
-    e.preventDefault();
-    const st=document.getElementById("submissionStatus");
-    const b=document.getElementById("submitManuscriptBtn");
-    sb=getSB();
-
-    if(!sb){
-      st.textContent="Submission service is not configured. Please check Supabase configuration.";
-      return;
-    }
-
-    b.disabled=true;
-    st.textContent="Uploading manuscript…";
-
-    try{
-      const f=document.getElementById("subManuscript").files[0];
-      const vals=[
-        "subFullName","subEmail","subUniversity","subCountry",
-        "subField","subTitle","subAbstract","subKeywords","subType"
-      ].map(id=>document.getElementById(id).value.trim());
-
-      if(vals.some(x=>!x)||!f) throw Error("Please complete all required fields and select the manuscript.");
-
-      const isWord=/\.docx$/i.test(f.name);
-      if(!isWord) throw Error("Please upload the manuscript in Microsoft Word (.docx) format.");
-
-      const code="AH-"+new Date().getFullYear()+"-"+Math.random().toString(36).slice(2,7).toUpperCase()+"-"+Date.now().toString().slice(-4);
-      const safeName=f.name.replace(/[^a-zA-Z0-9._-]/g,"_");
-      const path="manuscripts/"+code+"-"+safeName;
-
-      const up=await sb.storage.from("article-submissions").upload(path,f,{
-        contentType:"application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-        upsert:false
-      });
-      if(up.error) throw up.error;
-
-      const ins=await sb.from("article_submissions").insert({
-        submission_code:code,
-        full_name:vals[0],
-        email:vals[1],
-        university:vals[2],
-        country:vals[3],
-        field:vals[4],
-        article_title:vals[5],
-        abstract:vals[6],
-        keywords:vals[7],
-        article_type:vals[8],
-        manuscript_path:path,
-        manuscript_filename:f.name,
-        status:"Submitted"
-      }).select("submission_code").single();
-
-      if(ins.error){
-        await sb.storage.from("article-submissions").remove([path]);
-        throw ins.error;
-      }
-
-      alert("Manuscript submitted successfully.\n\nSubmission ID: "+ins.data.submission_code+"\nStatus: Submitted\n\nEditorial Office: journalaurahumanitas@gmail.com");
-      this.reset();
-      closeSubmission();
-      st.textContent="";
-    }catch(err){
-      st.textContent=err.message||String(err);
-    }finally{
-      b.disabled=false;
-    }
-  });
-})();
-</script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="config.js"></script>
 <script src="live_public.js"></script>
 </body>
