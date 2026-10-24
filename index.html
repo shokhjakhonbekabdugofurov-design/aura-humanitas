@@ -3,777 +3,165 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Aura Humanitas — Journal of academic and popular humanities.">
-<title>Aura Humanitas — Journal of Humanities</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
+<meta name="description" content="Journal of Aura Humanitas — multidisciplinary academic research, human values and global perspectives.">
+<title>Journal of Aura Humanitas | Academic Research</title>
 <style>
-:root{
-  --cream:#f6f1e8;
-  --paper:#fffdf9;
-  --paper2:#f1eadf;
-  --ink:#272522;
-  --muted:#716b63;
-  --line:#ddd5c8;
-  --accent:#7b5d43;
-  --accent2:#b29472;
-  --dark:#2e2b28;
-  --dark2:#403a34;
-  --white:#fff;
-  --shadow:0 18px 45px rgba(50,40,30,.10);
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;background:var(--cream);color:var(--ink);
-  font-family:"DM Sans",sans-serif;line-height:1.65;
-}
-a{text-decoration:none;color:inherit}
-button,input,select{font:inherit}
-.container{width:min(1180px,92%);margin:auto}
+:root{--navy:#082c59;--navy2:#06477f;--blue:#0877cf;--blue2:#eaf4fc;--gold:#d9a52e;--gold2:#f4c95d;--ink:#14243a;--muted:#627186;--line:#dce5ee;--paper:#fff;--wash:#f5f8fb;--green:#269b57;--shadow:0 12px 32px rgba(8,44,89,.10)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.55}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}.container{width:min(1240px,calc(100% - 48px));margin:auto}
+.utility{background:#06264c;color:#eaf3ff;font-size:12px}.utility .container{min-height:32px;display:flex;align-items:center;justify-content:space-between;gap:12px}.utility-links{display:flex;gap:22px;align-items:center}
+.brandbar{border-bottom:1px solid var(--line);background:#fff}.brandrow{min-height:94px;display:flex;align-items:center;justify-content:space-between;gap:28px}.brand{display:flex;align-items:center;gap:13px;min-width:290px}.brand-mark{width:62px;height:62px;display:grid;place-items:center;color:var(--gold)}.brand-mark svg{width:58px;height:58px}.brand-name{font-family:Georgia,'Times New Roman',serif;color:var(--navy);font-size:25px;line-height:1.02;font-weight:700;letter-spacing:.2px}.brand-sub{font-size:11px;color:#52657c;margin-top:7px;letter-spacing:.2px}.brand-meta{display:flex;align-items:center;gap:24px;color:#31465f;font-size:13px}.meta-issn{text-align:right;line-height:1.7;padding-right:20px;border-right:1px solid var(--line)}.head-action{border:0;background:transparent;color:var(--navy);display:flex;align-items:center;gap:8px;padding:10px 2px}.head-action svg{width:19px;height:19px}.sign-in{background:var(--blue);color:#fff;padding:11px 18px;border-radius:5px;box-shadow:0 5px 12px #0877cf2b}.sign-in:hover{background:#0567b4}
+.nav{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:10}.navrow{display:flex;align-items:center;gap:0;min-height:48px}.nav a{padding:14px 15px;font-size:13px;color:#24364c;white-space:nowrap}.nav a.active{color:var(--blue);border-bottom:3px solid var(--gold);font-weight:700}.nav a:hover{color:var(--blue)}.nav .submit-nav{margin-left:auto;background:var(--gold);color:#102b4b;border-radius:4px;padding:10px 17px;font-weight:700}.menu-toggle{display:none;background:none;border:0;color:var(--navy);font-size:24px}
+.hero{position:relative;overflow:hidden;background:linear-gradient(105deg,#06264c 0%,#06467d 55%,#1378b6 100%);color:#fff}.hero:before{content:"";position:absolute;right:-3%;top:-40%;width:56%;height:170%;background:radial-gradient(ellipse at 65% 45%,#80b9dc55,transparent 56%),linear-gradient(130deg,transparent 30%,#ffffff0b 30% 31%,transparent 31% 45%,#ffffff0b 45% 46%,transparent 46%);transform:skewX(-9deg)}.hero:after{content:"";position:absolute;right:0;bottom:0;width:52%;height:74%;opacity:.16;background:repeating-linear-gradient(90deg,transparent 0 48px,#b6d9ef 49px 51px,transparent 52px 88px);clip-path:polygon(10% 35%,100% 0,100% 100%,0 100%)}.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:200px minmax(300px,1fr) 390px;gap:34px;align-items:center;padding-top:27px;padding-bottom:28px;min-height:310px}.journal-cover{width:184px;height:245px;border:1px solid #ffffff70;border-radius:2px;box-shadow:0 15px 32px #00152f66;background:linear-gradient(155deg,#0b376b,#061d3f 70%);position:relative;overflow:hidden;padding:22px 15px;display:flex;flex-direction:column}.journal-cover:before{content:"";position:absolute;inset:auto -35px -45px 30px;height:150px;background:linear-gradient(135deg,#d4a22e,#ffe49a 50%,#87601b);transform:rotate(-22deg);opacity:.95}.journal-cover:after{content:"";position:absolute;right:14px;top:94px;width:90px;height:90px;border:1px solid #e5c86c99;border-radius:50%;box-shadow:0 0 0 13px #e5c86c18,0 0 0 27px #e5c86c12}.cover-mini{font-size:8px;color:#e5c66d;letter-spacing:1.6px;text-transform:uppercase}.cover-title{font-family:Georgia,serif;font-size:25px;line-height:1.04;margin-top:19px;position:relative;z-index:1}.cover-line{height:2px;background:var(--gold);width:38px;margin-top:12px}.cover-foot{font-size:7px;letter-spacing:.6px;color:#dbe8f5;position:relative;z-index:2;margin-top:auto}.eyebrow{font-size:12px;color:#ffd66c;letter-spacing:.5px;margin-bottom:10px}.eyebrow:before{content:"";display:inline-block;width:23px;height:3px;background:var(--gold2);vertical-align:middle;margin-right:12px}.hero h1{font-family:Georgia,'Times New Roman',serif;font-weight:500;font-size:clamp(32px,3.4vw,47px);line-height:1.08;margin:0 0 13px;letter-spacing:-.6px}.hero-copy{font-size:14px;max-width:540px;color:#e5f0fb;margin:0 0 19px}.pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:15px}.pill{border:1px solid #ffffff48;border-radius:30px;padding:4px 10px;font-size:10px;color:#f4f8ff;background:#ffffff0d}.hero-buttons{display:flex;gap:12px;flex-wrap:wrap}.btn{border:1px solid transparent;border-radius:4px;padding:11px 16px;font-size:13px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:.2s}.btn-gold{background:var(--gold2);color:#122e4f}.btn-gold:hover{background:#ffdb76;transform:translateY(-1px)}.btn-outline{border-color:#b8d5ef;color:white;background:#ffffff08}.btn-outline:hover{background:#ffffff17}.metrics{display:grid;grid-template-columns:repeat(3,1fr);background:#052c5577;border:1px solid #b5d4ee55;border-radius:7px;overflow:hidden;backdrop-filter:blur(3px)}.metric{padding:17px 13px;min-height:112px;border-right:1px solid #ffffff32}.metric:last-child{border-right:0}.metric svg{width:21px;height:21px;color:#ffd35c;margin-bottom:7px}.metric strong{display:block;font-size:17px;line-height:1.2}.metric span{display:block;font-size:10px;line-height:1.35;color:#e4effb;margin-top:5px}
+.main{padding:26px 0 30px}.section-head{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:15px}.section-title{font-size:20px;margin:0;font-weight:750;color:#102c50;display:flex;align-items:center;gap:12px}.section-title:before{content:"";width:20px;height:3px;background:var(--gold);display:inline-block}.text-link{font-size:12px;color:var(--blue);font-weight:700}.text-link:hover{text-decoration:underline}.tabs{display:flex;gap:0;border-bottom:1px solid #c9d5e0;margin-bottom:16px;overflow:auto}.tab{border:0;background:transparent;padding:10px 17px;color:#4c5b6c;white-space:nowrap;border-bottom:3px solid transparent;font-size:13px}.tab.active{border-bottom-color:var(--gold);color:var(--navy);font-weight:700}.article-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.article-card{background:linear-gradient(145deg,#fff,#f7f9fc);border:1px solid #e7edf3;border-radius:5px;padding:16px 15px 14px;display:flex;flex-direction:column;min-height:230px;transition:.2s}.article-card:nth-child(2n){background:linear-gradient(145deg,#f2f8fd,#eaf3fc)}.article-card:hover{box-shadow:var(--shadow);transform:translateY(-2px);border-color:#c7dced}.article-type{font-size:10px;color:#465b73;display:flex;align-items:center;gap:7px;margin-bottom:9px}.dot{width:7px;height:7px;border-radius:50%;background:var(--green);display:inline-block}.oa{font-style:italic}.article-card h3{font-family:Georgia,serif;font-size:17px;line-height:1.28;font-weight:500;margin:0 0 12px;color:#102c50}.authors{font-size:11px;color:#5b6877;margin-top:auto}.date{font-size:11px;color:#56687c;margin-top:4px}.doi{font-size:10px;color:#4f6175;margin-top:4px;overflow-wrap:anywhere}.doi b{color:var(--blue);font-weight:600}.card-actions{display:flex;gap:13px;align-items:center;margin-top:10px;font-size:11px;color:var(--blue);font-weight:650}.card-actions a:hover{text-decoration:underline}.pdf-icon{color:#e14c4c;font-weight:800;margin-right:4px}.empty-state{padding:35px;text-align:center;color:var(--muted);grid-column:1/-1}
+.info-grid{display:grid;grid-template-columns:1.1fr .9fr 1.15fr;gap:34px;margin-top:27px}.info-panel{min-width:0}.info-panel .section-title{font-size:17px;margin-bottom:14px}.about-copy{font-size:12px;color:#435a74;margin:0 0 15px}.small-btn{font-size:11px;color:var(--blue);border:1px solid #8abce6;border-radius:3px;padding:7px 11px;display:inline-flex;gap:8px;align-items:center;background:#fff}.small-btn:hover{background:#eef7ff}.editor-profile{display:flex;align-items:center;gap:14px}.avatar{width:88px;height:88px;border-radius:50%;flex:0 0 88px;background:linear-gradient(135deg,#c6d8e8,#eef3f8);display:grid;place-items:center;color:#16416b;font-size:27px;font-weight:700;border:3px solid #e4edf5}.editor-profile strong{font-size:13px;color:#16365d}.editor-profile p{font-size:11px;color:#5e6d7e;line-height:1.55;margin:5px 0}.editor-link{display:inline-block;color:var(--blue);font-size:11px;margin-top:12px}.news-list{display:grid;gap:12px}.news-item{display:grid;grid-template-columns:38px 1fr;gap:11px;align-items:start}.news-date{background:#e5f1fb;color:#174f81;text-align:center;border-radius:4px;padding:5px 2px;font-size:10px;font-weight:750;line-height:1.25}.news-item strong{display:block;font-size:12px;color:#16365d;line-height:1.35}.news-item span{display:block;font-size:11px;color:#718093;margin-top:3px}
+.newsletter{background:#f1f7fc;border-top:1px solid #e0ebf5;border-bottom:1px solid #e0ebf5;padding:22px 0;margin-top:26px}.newsletter-row{display:flex;align-items:center;justify-content:space-between;gap:25px}.newsletter h3{font-family:Georgia,serif;font-size:19px;margin:0;color:var(--navy)}.newsletter p{font-size:12px;color:#60758b;margin:3px 0 0}.newsletter-form{display:flex;gap:8px;width:min(420px,100%)}.newsletter-form input{flex:1;min-width:0;border:1px solid #ccd9e5;border-radius:4px;padding:10px 12px;background:#fff;font-size:12px}
+footer{background:#eaf3fb;border-top:1px solid #d5e5f3}.footer-main{display:grid;grid-template-columns:1.6fr repeat(4,1fr);gap:28px;padding:27px 0 22px}.footer-brand .brand{min-width:0;gap:9px}.footer-brand .brand-mark{width:43px;height:43px}.footer-brand .brand-mark svg{width:40px;height:40px}.footer-brand .brand-name{font-size:17px}.footer-brand .brand-sub{font-size:9px}.footer-brand p{font-size:10px;color:#60758b;margin:13px 0}.socials{display:flex;gap:7px}.socials a{display:grid;place-items:center;width:27px;height:27px;border-radius:50%;background:#0b3769;color:white;font-size:11px;font-weight:700}.footer-col h4{font-size:12px;color:#14345c;margin:3px 0 10px}.footer-col a{display:block;font-size:10px;color:#526b84;margin:5px 0}.footer-col a:hover{color:var(--blue);text-decoration:underline}.footer-bottom{border-top:1px solid #d4e1ed;padding:11px 0;display:flex;justify-content:space-between;gap:14px;font-size:10px;color:#52667c}.policy{display:flex;gap:15px;flex-wrap:wrap}.doi-badges{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:15px}.doi-badge{background:#fff;border:1px solid #d7e4ef;border-radius:4px;padding:5px 8px;font-size:10px;font-weight:800;color:#2a587c}.doi-badge.gold{color:#8a6411}
+.modal-backdrop{position:fixed;inset:0;background:#071c35a8;display:none;align-items:center;justify-content:center;padding:20px;z-index:30}.modal-backdrop.open{display:flex}.modal{background:#fff;border-radius:10px;width:min(520px,100%);max-height:90vh;overflow:auto;box-shadow:0 25px 80px #00152f55}.modal-head{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border-bottom:1px solid var(--line)}.modal-head h2{margin:0;font-size:19px;color:var(--navy)}.close{border:0;background:#eef4f9;border-radius:50%;width:31px;height:31px;font-size:19px;color:var(--navy)}.modal-body{padding:22px}.form-row{margin-bottom:13px}.form-row label{display:block;font-size:12px;font-weight:700;color:#344b65;margin-bottom:5px}.form-row input,.form-row select,.form-row textarea{width:100%;border:1px solid #cbd8e4;border-radius:4px;padding:10px 11px;font-size:13px;outline:none}.form-row input:focus,.form-row select:focus,.form-row textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px #0877cf19}.form-row textarea{min-height:85px;resize:vertical}.form-note{font-size:11px;color:#6b7c8e;margin:10px 0 0}.form-submit{width:100%;border:0;background:var(--blue);color:#fff;border-radius:4px;padding:12px;font-weight:700}.form-submit:hover{background:#0567b4}.switch-form{text-align:center;font-size:12px;color:#64758a;margin-top:15px}.switch-form button{border:0;background:none;color:var(--blue);font-weight:700}.toast{position:fixed;bottom:20px;right:20px;z-index:40;background:#0d3a66;color:#fff;padding:13px 17px;border-radius:6px;box-shadow:var(--shadow);font-size:13px;display:none;max-width:360px}.toast.show{display:block;animation:fadein .25s}@keyframes fadein{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}.searchbox{display:none;position:absolute;right:max(24px,calc((100% - 1240px)/2));top:82px;background:#fff;padding:12px;border:1px solid var(--line);box-shadow:var(--shadow);z-index:12;border-radius:6px;width:min(360px,calc(100vw - 32px))}.searchbox.open{display:flex;gap:8px}.searchbox input{flex:1;min-width:0;border:1px solid var(--line);border-radius:4px;padding:9px;font-size:12px}.searchbox button{border:0;background:var(--blue);color:#fff;border-radius:4px;padding:0 12px}
+@media(max-width:1050px){.hero-grid{grid-template-columns:155px 1fr;gap:25px}.journal-cover{width:150px;height:215px}.metrics{grid-column:1/-1;margin-top:0}.metric{min-height:85px}.hero-grid{padding-top:24px}.brand-meta{gap:12px}.nav a{padding:13px 9px;font-size:12px}.article-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.info-grid{grid-template-columns:1fr 1fr}.info-panel:last-child{grid-column:1/-1}.footer-main{grid-template-columns:1.4fr repeat(2,1fr)}}
+@media(max-width:700px){.container{width:min(100% - 30px,1240px)}.utility .container{font-size:10px}.utility-links{gap:10px}.brandrow{min-height:78px}.brand{min-width:0}.brand-mark{width:44px;height:44px}.brand-mark svg{width:43px;height:43px}.brand-name{font-size:18px}.brand-sub{font-size:9px}.brand-meta{gap:10px}.meta-issn,.head-action.search-action,.head-action.account-action{display:none}.sign-in{padding:9px 11px;font-size:11px}.navrow{flex-wrap:wrap;justify-content:space-between;padding:4px 0}.menu-toggle{display:block}.nav-links{display:none;flex-direction:column;width:100%;padding:6px 0 10px}.nav-links.open{display:flex}.nav-links a{padding:10px 6px;border-bottom:1px solid #edf1f5}.nav a.active{border-bottom:1px solid #edf1f5;border-left:3px solid var(--gold);padding-left:10px}.nav .submit-nav{margin:0 0 8px;padding:10px 13px}.hero-grid{grid-template-columns:92px 1fr;gap:17px;padding:22px 0}.journal-cover{width:92px;height:143px;padding:10px 8px}.cover-title{font-size:15px;margin-top:10px}.cover-mini{font-size:5px}.cover-line{margin-top:7px}.cover-foot{font-size:5px}.hero h1{font-size:29px}.hero-copy{font-size:12px}.eyebrow{font-size:9px}.pill-row{gap:4px}.pill{font-size:8px;padding:3px 6px}.hero-buttons .btn{padding:9px 10px;font-size:11px}.metrics{grid-column:1/-1}.metric{padding:12px 9px}.metric strong{font-size:15px}.metric span{font-size:9px}.main{padding-top:22px}.section-title{font-size:18px}.tabs{margin-bottom:12px}.tab{padding:9px 12px;font-size:12px}.article-grid{grid-template-columns:1fr;gap:10px}.article-card{min-height:0}.article-card h3{font-size:18px}.info-grid{grid-template-columns:1fr;gap:25px;margin-top:26px}.info-panel:last-child{grid-column:auto}.newsletter-row{align-items:flex-start;flex-direction:column;gap:14px}.newsletter-form{width:100%}.footer-main{grid-template-columns:1fr 1fr;gap:22px}.footer-brand{grid-column:1/-1}.footer-bottom{flex-direction:column}.searchbox{top:68px;right:15px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 
-header{
-  position:sticky;top:0;z-index:100;
-  background:rgba(246,241,232,.94);
-  border-bottom:1px solid var(--line);
-  backdrop-filter:blur(15px);
-}
-.nav{
-  min-height:78px;display:flex;align-items:center;
-  justify-content:space-between;gap:25px;
-}
-.logo{
-  font-family:"Playfair Display",serif;font-size:25px;
-  font-weight:700;letter-spacing:-.6px;line-height:1;
-}
-.logo span{
-  display:block;margin-top:7px;color:var(--muted);
-  font-family:"DM Sans",sans-serif;font-size:9px;
-  font-weight:600;letter-spacing:2.1px;text-transform:uppercase;
-}
-nav{display:flex;align-items:center;gap:22px;font-size:12px;color:#504b45}
-nav a{transition:.2s}
-nav a:hover{color:var(--accent)}
-.auth-links{display:flex;align-items:center;gap:7px}
-.auth-link{display:inline-flex;align-items:center;justify-content:center;padding:8px 11px;border:1px solid var(--line);background:var(--paper);font-size:10px;font-weight:700;white-space:nowrap;transition:.2s}
-.auth-link:hover{color:var(--accent);border-color:var(--accent2)}
-.auth-link.register{background:var(--ink);border-color:var(--ink);color:#fff}
-.auth-link.register:hover{color:#fff;opacity:.9}
-@media(max-width:680px){.auth-link{padding:7px 8px;font-size:9px}.search input{width:75px}.nav-actions{gap:6px}}
+.monthly-issues{margin-top:34px;padding:23px 24px 20px;background:linear-gradient(135deg,#f5f9fd,#fff);border:1px solid #dfe9f2;border-radius:7px}
+.monthly-intro{font-size:12px;color:#64768a;margin:-5px 0 15px}
+.month-group{border:1px solid #d8e4ef;background:#fff;border-radius:5px;margin:10px 0;overflow:hidden}
+.month-group summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:15px;padding:15px 17px;color:var(--navy)}
+.month-group summary::-webkit-details-marker{display:none}
+.month-group summary:before{content:"＋";display:grid;place-items:center;width:27px;height:27px;flex:0 0 27px;background:#eaf4fc;color:var(--blue);border-radius:4px;font-weight:700}
+.month-group[open] summary:before{content:"−";background:#fff4d7;color:#9a6b00}
+.month-group summary>span:first-of-type{flex:1}
+.month-group summary strong{display:block;font-size:14px}
+.month-group summary small{display:block;font-size:11px;color:#728398;margin-top:2px}
+.month-count{font-size:11px;color:#54708c;white-space:nowrap}.month-count b{font-size:17px;color:var(--gold);margin-left:9px}
+.month-articles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 22px;padding:0 18px 12px 60px}
+.month-articles article{padding:12px 0;border-top:1px solid #edf1f5;min-width:0}
+.month-articles a{display:block;color:#12375f;font-family:Georgia,serif;font-size:14px;line-height:1.35;margin:4px 0}
+.month-articles a:hover{color:var(--blue);text-decoration:underline}
+.month-articles small{display:block;color:#718196;font-size:10px}
+.month-type{font-size:9px;color:#1c7e52;text-transform:uppercase;letter-spacing:.5px}
+.monthly-note{font-size:10px;color:#718196;margin:13px 0 0}
+@media(max-width:700px){.monthly-issues{padding:17px 12px}.month-group summary{padding:12px 10px;gap:9px}.month-articles{grid-template-columns:1fr;padding:0 12px 10px 47px}.month-articles a{font-size:13px}.month-count{font-size:10px}}
 
-.nav-actions{display:flex;align-items:center;gap:10px}
-.lang{
-  border:1px solid var(--line);background:var(--paper);
-  padding:8px 10px;border-radius:2px;color:var(--muted);
-}
-.search{
-  display:flex;align-items:center;gap:7px;
-  border:1px solid var(--line);background:var(--paper);
-  padding:8px 12px;border-radius:25px;
-}
-.search input{width:110px;border:0;outline:0;background:transparent;font-size:11px}
-.menu{display:none;border:1px solid var(--line);background:var(--paper);padding:9px 11px}
-
-.hero{padding:76px 0 78px}
-.hero-grid{
-  display:grid;grid-template-columns:1.05fr .95fr;
-  gap:70px;align-items:center;
-}
-.kicker,.tag{
-  color:var(--accent);font-size:10px;font-weight:700;
-  letter-spacing:2px;text-transform:uppercase;
-}
-h1,h2,h3,h4{
-  font-family:"Playfair Display",serif;
-  line-height:1.08;font-weight:600;
-}
-h1{
-  font-size:clamp(46px,6vw,78px);
-  letter-spacing:-2.8px;margin:15px 0 23px;
-}
-.hero p{max-width:650px;color:var(--muted);font-size:16px}
-.meta{
-  display:flex;gap:17px;flex-wrap:wrap;margin:22px 0;
-  font-size:11px;color:var(--muted)
-}
-.buttons{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;
-  padding:13px 19px;background:var(--ink);color:#fff;
-  border:1px solid var(--ink);font-size:11px;font-weight:700;
-  transition:.2s;
-}
-.btn:hover{transform:translateY(-2px)}
-.btn.light{background:transparent;color:var(--ink);border-color:var(--line)}
-
-.hero-art{
-  min-height:510px;position:relative;overflow:hidden;
-  background:linear-gradient(145deg,#bda98f,#63564b);
-  box-shadow:var(--shadow);
-}
-.hero-art:before{
-  content:"";position:absolute;width:65%;height:78%;right:-13%;top:9%;
-  background:rgba(255,250,238,.22);
-  border-radius:52% 48% 60% 40%;transform:rotate(19deg);
-}
-.hero-art:after{
-  content:"AURA";position:absolute;right:24px;bottom:20px;
-  color:rgba(255,255,255,.65);
-  font:600 75px "Playfair Display";letter-spacing:7px;
-}
-.journal-cover{
-  position:absolute;left:38px;top:38px;width:245px;height:325px;
-  padding:25px;background:#f0e8d9;color:#302b26;
-  box-shadow:18px 20px 35px rgba(30,25,20,.28);
-  transform:rotate(-2deg);
-}
-.journal-cover small{font-size:8px;letter-spacing:1.8px}
-.cover-title{
-  margin-top:75px;font:600 31px/1.02 "Playfair Display";
-}
-.cover-rule{height:1px;background:#a49480;margin:25px 0}
-.journal-cover p{font-size:9px;color:#62594e;margin:0}
-
-.section{padding:70px 0;border-top:1px solid var(--line)}
-.section-head{
-  display:flex;justify-content:space-between;align-items:end;
-  gap:20px;margin-bottom:30px
-}
-.section h2{font-size:40px;margin:7px 0 0;letter-spacing:-1px}
-.view{font-size:11px;text-decoration:underline;color:var(--muted)}
-
-.issue-info{
-  background:var(--dark);color:#f4eee5;
-  padding:25px 28px;margin-bottom:25px;
-  display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
-}
-.issue-info span{
-  display:block;color:#bdb3a7;font-size:9px;
-  text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px
-}
-.issue-info strong{font-size:13px}
-
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:23px}
-.card{
-  background:var(--paper);border:1px solid var(--line);
-  transition:.25s;overflow:hidden;
-}
-.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-.thumb{
-  height:190px;position:relative;overflow:hidden;
-  display:flex;align-items:center;justify-content:center;
-}
-.thumb.one{background:linear-gradient(135deg,#9b876f,#d7c5a9)}
-.thumb.two{background:linear-gradient(135deg,#73715f,#c7bfa8)}
-.thumb.three{background:linear-gradient(135deg,#584e49,#b59f8a)}
-.thumb.four{background:linear-gradient(135deg,#756050,#d3bda3)}
-.thumb.five{background:linear-gradient(135deg,#4e5651,#aeb5a9)}
-.thumb.six{background:linear-gradient(135deg,#67555c,#c3a9a7)}
-.thumb:after{
-  content:"";position:absolute;width:55%;height:60%;
-  border:1px solid rgba(255,255,255,.48);
-  transform:rotate(-8deg)
-}
-.thumb-label{
-  position:relative;z-index:2;color:rgba(255,255,255,.88);
-  font:500 23px "Playfair Display";letter-spacing:1px
-}
-.card-body{padding:21px}
-.card h3{font-size:24px;margin:9px 0 11px}
-.card p{font-size:12px;color:var(--muted);margin:0 0 17px}
-.card-meta{
-  display:flex;justify-content:space-between;gap:10px;
-  border-top:1px solid var(--line);padding-top:13px;
-  color:var(--muted);font-size:10px
-}
-.read{display:inline-block;margin-top:13px;font-size:10px;font-weight:700;color:var(--accent)}
-
-.dark-section{background:var(--dark);color:#f3ede4}
-.dark-section .kicker{color:#b99d7d}
-.dark-section p{color:#c5bbb0}
-
-.archives{
-  display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center
-}
-.archive-text h2{font-size:44px;margin:8px 0 17px}
-.issue-cover-large{
-  width:235px;height:305px;margin:auto;padding:25px;
-  background:#e7ddcc;color:#302b27;
-  box-shadow:25px 22px 0 #564c43;
-  transform:rotate(2deg)
-}
-.issue-cover-large .big{
-  margin-top:55px;font:600 31px/1 "Playfair Display"
-}
-.archive-links{margin-top:25px;display:flex;gap:10px;flex-wrap:wrap}
-
-.archive-list{display:grid;gap:12px}
-.archive-row{
-  display:flex;justify-content:space-between;align-items:center;
-  gap:20px;padding:21px 0;border-bottom:1px solid var(--line);
-}
-.archive-row:first-child{border-top:1px solid var(--line)}
-.archive-row h3{font-size:23px;margin:0 0 4px}
-.archive-row p{margin:0;color:var(--muted);font-size:11px}
-.badge{
-  border:1px solid var(--line);padding:7px 10px;
-  font-size:9px;color:var(--muted);white-space:nowrap
-}
-
-.about-grid{
-  display:grid;grid-template-columns:1fr 1fr;gap:25px
-}
-.info-box{
-  background:var(--paper);border:1px solid var(--line);padding:30px
-}
-.info-box h3{font-size:27px;margin:5px 0 12px}
-.info-box p{font-size:13px;color:var(--muted);margin:0}
-.feature-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
-.feature{
-  background:var(--paper2);padding:13px;font-size:11px
-}
-
-.board-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.person{
-  background:var(--paper);border:1px solid var(--line);padding:23px
-}
-.avatar{
-  width:62px;height:62px;border-radius:50%;
-  background:linear-gradient(135deg,#b9a58c,#62564d);
-  margin-bottom:17px;display:flex;align-items:center;justify-content:center;
-  color:white;font:600 21px "Playfair Display"
-}
-.person h3{font-size:22px;margin:0 0 4px}
-.person .role{font-size:10px;color:var(--accent);text-transform:uppercase;letter-spacing:1px}
-.person p{font-size:11px;color:var(--muted);margin:12px 0 0}
-
-.author-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.guideline{
-  border:1px solid var(--line);background:var(--paper);
-  padding:23px;display:flex;gap:17px
-}
-.number{
-  font:600 24px "Playfair Display";color:var(--accent)
-}
-.guideline h3{font-size:20px;margin:0 0 5px}
-.guideline p{font-size:11px;color:var(--muted);margin:0}
-
-.indexing{
-  background:var(--paper);border:1px solid var(--line);
-  padding:32px;display:flex;gap:15px;flex-wrap:wrap
-}
-.index-pill{
-  padding:12px 16px;border:1px solid var(--line);
-  background:#f6f0e6;font-size:11px;font-weight:700
-}
-
-.newsletter{padding:70px 0}
-.news-card{
-  background:var(--paper);border:1px solid var(--line);
-  padding:48px;text-align:center
-}
-.news-card h2{font-size:39px;margin:7px 0 10px}
-.news-card p{max-width:560px;margin:0 auto 25px;color:var(--muted);font-size:13px}
-.form{display:flex;max-width:500px;margin:auto}
-.form input{
-  flex:1;border:1px solid var(--line);padding:14px;
-  background:#fff;outline:0
-}
-.form button{
-  border:0;background:var(--ink);color:#fff;
-  padding:0 22px;font-weight:700;cursor:pointer
-}
-
-footer{background:#302d29;color:#eee7dd;padding:50px 0}
-.footer{
-  display:grid;grid-template-columns:1.5fr 1fr 1fr;
-  gap:35px
-}
-footer .logo{font-size:23px}
-footer p{font-size:11px;color:#bcb4a9;max-width:390px}
-.footer h4{
-  font-family:"DM Sans",sans-serif;font-size:10px;
-  letter-spacing:1.5px;text-transform:uppercase;margin:0 0 13px;color:#fff
-}
-.footer-links{display:grid;gap:8px;font-size:11px;color:#c8c0b6}
-.copyright{
-  border-top:1px solid #514a43;margin-top:35px;padding-top:20px;
-  font-size:10px;color:#999087;display:flex;
-  justify-content:space-between;gap:20px;flex-wrap:wrap
-}
-
-.toast{
-  position:fixed;right:20px;bottom:20px;
-  background:var(--ink);color:#fff;padding:13px 17px;
-  font-size:11px;opacity:0;transform:translateY(15px);
-  pointer-events:none;transition:.25s;z-index:200
-}
-.toast.show{opacity:1;transform:none}
-
-@media(max-width:980px){
-  nav{display:none}.menu{display:block}
-  .hero-grid,.archives{grid-template-columns:1fr}
-  .hero-art{min-height:440px}
-  .grid{grid-template-columns:1fr 1fr}
-  .board-grid{grid-template-columns:1fr 1fr}
-  .footer{grid-template-columns:1fr 1fr}
-}
-@media(max-width:680px){
-  .hero{padding:50px 0}.hero-art{min-height:380px}
-  .journal-cover{transform:scale(.82) rotate(-2deg);transform-origin:top left}
-  .issue-info{grid-template-columns:1fr 1fr}
-  .grid,.about-grid,.author-grid,.board-grid{grid-template-columns:1fr}
-  .section{padding:52px 0}
-  .section-head{align-items:start;flex-direction:column}
-  .feature-list{grid-template-columns:1fr}
-  .archive-row{align-items:start;flex-direction:column}
-  .form{flex-direction:column;gap:8px}.form button{padding:13px}
-  .footer{grid-template-columns:1fr}
-}
 </style>
 </head>
-
 <body>
+<div class="utility"><div class="container"><span>Journal of Aura Humanitas <span style="opacity:.6">|</span> International Academic Journal</span><div class="utility-links"><a href="#about">About</a><a href="#contact">Contact</a><a href="#faq">FAQ</a><a href="#top">◎ English⌄</a></div></div></div>
+<header class="brandbar" id="top"><div class="container brandrow">
+<a class="brand" href="#top" aria-label="Journal of Aura Humanitas home"><div class="brand-mark"><svg viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M32 7v48M32 13C22 6 17 7 12 12c7 1 13 5 20 15M32 21C20 14 13 17 8 23c9 0 17 5 24 15M32 29C19 24 11 29 8 36c10-2 18 3 24 10M32 13c10-7 15-6 20-1-7 1-13 5-20 15M32 21c12-7 19-4 24 2-9 0-17 5-24 15M32 29c13-5 21 0 24 7-10-2-18 3-24 10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M23 53h18M27 58h10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></div><div><div class="brand-name">Journal of<br>AURA HUMANITAS</div><div class="brand-sub">Academic Research · Human Values · Global Perspectives</div></div></a>
+<div class="brand-meta"><div class="meta-issn">ISSN (Online): Pending<br>e-ISSN: Pending</div><button class="head-action search-action" id="openSearch" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg>Search</button><button class="head-action account-action" data-modal="signin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg>My account</button><button class="head-action sign-in" data-modal="signin"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 17l5-5-5-5M15 12H3"/><path d="M12 3h7a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-7"/></svg>Sign in</button></div>
+</div></header>
+<div class="nav"><div class="container navrow"><button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button><div class="nav-links" id="navLinks"><a class="active" href="#top">Home</a><a href="#articles">Latest Articles</a><a href="#monthly-issues">Monthly Issues</a><a href="#about">About⌄</a><a href="#authors">For Authors⌄</a><a href="#reviewers">For Reviewers⌄</a><a href="#editors">For Editors⌄</a><a href="#ethics">Ethics &amp; Policies⌄</a><a href="#contact">Contact</a></div><button class="btn submit-nav" data-modal="submit">Submit your article ↗</button></div></div>
+<div class="searchbox" id="searchBox"><input id="searchInput" placeholder="Search articles, authors, keywords…" aria-label="Search articles"><button id="searchButton">Search</button></div>
+<section class="hero"><div class="container hero-grid">
+<div class="journal-cover" aria-label="Journal cover artwork"><div class="cover-mini">Academic journal · Vol. 1</div><div class="cover-title">Journal of<br>AURA<br>HUMANITAS</div><div class="cover-line"></div><div class="cover-foot">HUMANITIES · SOCIAL SCIENCES<br>EDUCATION · GLOBAL STUDIES</div></div>
+<div><div class="eyebrow">OPEN ACCESS &nbsp;|&nbsp; PEER-REVIEWED &nbsp;|&nbsp; MULTIDISCIPLINARY</div><h1>Journal of<br>Aura Humanitas</h1><p class="hero-copy">A peer-reviewed international journal dedicated to advancing multidisciplinary research in the humanities, social sciences, education, and related fields.</p><div class="pill-row"><span class="pill">Research articles</span><span class="pill">Review papers</span><span class="pill">Global perspectives</span></div><div class="hero-buttons"><button class="btn btn-gold" data-modal="submit">Submit your article ↗</button><a class="btn btn-outline" href="#articles">Explore latest articles →</a></div></div>
+<div class="metrics"><div class="metric"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v6h5M9 13h8M9 17h6"/></svg><strong>2 days*</strong><span>Submission to first decision</span></div><div class="metric"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="4"/><path d="M2 21v-2a7 7 0 0 1 14 0v2M17 5a4 4 0 0 1 0 7M19 15a5 5 0 0 1 3 4v2"/></svg><strong>16 days*</strong><span>Submission to decision after review</span></div><div class="metric"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="m7 12 3 3 7-7"/></svg><strong>7 days*</strong><span>Submission to acceptance</span></div></div>
+</div></section>
+<main class="main container" id="articles">
+<div class="section-head"><h2 class="section-title">Latest Articles</h2><a class="text-link" href="#articles" id="viewAll">View all articles →</a></div>
+<div class="tabs" role="tablist" aria-label="Article lists"><button class="tab active" data-filter="latest" role="tab" aria-selected="true">Latest published</button><button class="tab" data-filter="press" role="tab" aria-selected="false">Articles in press</button><button class="tab" data-filter="cited" role="tab" aria-selected="false">Most cited</button><button class="tab" data-filter="downloaded" role="tab" aria-selected="false">Most downloaded</button><button class="tab" data-filter="popular" role="tab" aria-selected="false">Most popular</button></div>
+<div class="article-grid" id="articleGrid">
+<article class="article-card" data-categories="latest popular"><div class="article-type">Research article <span class="dot"></span><span class="oa">Open access</span></div><h3>The role of digital education in developing students’ critical thinking skills: A case study from Uzbekistan</h3><div class="authors">A. Karimov, S. Ruziboyeva, et al.</div><div class="date">15 October 2026</div><div class="doi">DOI: <b>Pending registration</b></div><div class="card-actions"><a href="#" data-demo="PDF preview"><span class="pdf-icon">▧</span>View PDF</a><a href="#" data-demo="Abstract">Abstract →</a></div></article>
+<article class="article-card" data-categories="latest cited"><div class="article-type">Review article <span class="dot"></span><span class="oa">Open access</span></div><h3>Sustainable urban development in Central Asia: Challenges and opportunities</h3><div class="authors">M. Tursunov, D. Akbarova, et al.</div><div class="date">12 October 2026</div><div class="doi">DOI: <b>Pending registration</b></div><div class="card-actions"><a href="#" data-demo="PDF preview"><span class="pdf-icon">▧</span>View PDF</a><a href="#" data-demo="Abstract">Abstract →</a></div></article>
+<article class="article-card" data-categories="latest downloaded"><div class="article-type">Research article <span class="dot"></span><span class="oa">Open access</span></div><h3>Cultural heritage and modern identity in the Fergana Valley: A sociological analysis</h3><div class="authors">N. Abdurahmonov, F. Xolmirzayeva, et al.</div><div class="date">10 October 2026</div><div class="doi">DOI: <b>Pending registration</b></div><div class="card-actions"><a href="#" data-demo="PDF preview"><span class="pdf-icon">▧</span>View PDF</a><a href="#" data-demo="Abstract">Abstract →</a></div></article>
+<article class="article-card" data-categories="latest press popular"><div class="article-type">Research article <span class="dot"></span><span class="oa">Open access</span></div><h3>AI in higher education: Trends, applications and ethical considerations</h3><div class="authors">S. Muminov, L. Isayeva, et al.</div><div class="date">08 October 2026</div><div class="doi">DOI: <b>Pending registration</b></div><div class="card-actions"><a href="#" data-demo="PDF preview"><span class="pdf-icon">▧</span>View PDF</a><a href="#" data-demo="Abstract">Abstract →</a></div></article>
+</div>
 
-<header>
-  <div class="container nav">
-    <a class="logo" href="#home">
-      Aura Humanitas
-      <span>Journal of Academic & Popular Humanities</span>
-    </a>
-
-    <nav>
-      <a href="#issue">Current Issue</a>
-      <a href="#archives">Archives</a>
-      <a href="#about">About</a>
-      <a href="#board">Editorial Board</a>
-      <a href="#authors">For Authors</a>
-    </nav>
-
-    <div class="nav-actions">
-      <div class="auth-links" aria-label="Account">
-        <a class="auth-link" href="/auth/index.html#login">Sign In</a>
-        <a class="auth-link register" href="/auth/index.html#register">Register</a>
-      </div>
-      <div class="search">⌕ <input id="searchInput" placeholder="Search articles"></div>
-      <select class="lang" aria-label="Language">
-        <option>EN</option>
-        <option>UZ</option>
-        <option>RU</option>
-      </select>
-      <button class="menu" onclick="toggleMenu()">☰</button>
+<section class="monthly-issues" id="monthly-issues" aria-labelledby="monthlyTitle">
+  <div class="section-head"><h2 class="section-title" id="monthlyTitle">Monthly Issues</h2><span class="text-link">Browse articles by publication month</span></div>
+  <p class="monthly-intro">Choose a month to view all articles published in that issue. Months are shown in reverse chronological order.</p>
+  <details class="month-group" open>
+    <summary><span><strong>October 2026</strong><small>October issue · Volume 1</small></span><span class="month-count">4 articles <b>⌄</b></span></summary>
+    <div class="month-articles">
+      <article><span class="month-type">Research article</span><a href="#articles">The role of digital education in developing students’ critical thinking skills: A case study from Uzbekistan</a><small>15 October 2026 · DOI pending registration</small></article>
+      <article><span class="month-type">Review article</span><a href="#articles">Sustainable urban development in Central Asia: Challenges and opportunities</a><small>12 October 2026 · DOI pending registration</small></article>
+      <article><span class="month-type">Research article</span><a href="#articles">Cultural heritage and modern identity in the Fergana Valley: A sociological analysis</a><small>10 October 2026 · DOI pending registration</small></article>
+      <article><span class="month-type">Research article</span><a href="#articles">AI in higher education: Trends, applications and ethical considerations</a><small>08 October 2026 · DOI pending registration</small></article>
     </div>
-  </div>
-</header>
-
-<main id="home">
-
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <div class="kicker">Volume XII · Issue 8 · August 2026</div>
-      <h1>Journal of<br>Aura Humanitas</h1>
-      <p>
-        An academic and popular humanities journal dedicated to research,
-        critical thought, culture, literature, history, philosophy, art,
-        society, and the study of human experience.
-      </p>
-
-      <div class="meta">
-        <span>ISSN: —</span>
-        <span>Open Access</span>
-        <span>Peer Reviewed</span>
-        <span>Humanities</span>
-      </div>
-
-      <div class="buttons">
-        <a class="btn" href="#issue">View Current Issue →</a>
-        <a class="btn light" href="#authors">Submit an Article</a>
-      </div>
+  </details>
+  <details class="month-group">
+    <summary><span><strong>September 2026</strong><small>September issue · Volume 1</small></span><span class="month-count">3 articles <b>⌄</b></span></summary>
+    <div class="month-articles">
+      <article><span class="month-type">Research article</span><a href="#articles">Digital transformation and access to education in regional communities</a><small>24 September 2026 · Sample article</small></article>
+      <article><span class="month-type">Research article</span><a href="#articles">Language, identity and cultural change in contemporary Central Asia</a><small>16 September 2026 · Sample article</small></article>
+      <article><span class="month-type">Review article</span><a href="#articles">Responsible artificial intelligence in academic research: A review</a><small>04 September 2026 · Sample article</small></article>
     </div>
-
-    <div class="hero-art">
-      <div class="journal-cover">
-        <small>AURA HUMANITAS · VOL. XII · ISSUE 8</small>
-        <div class="cover-title">JOURNAL<br>OF HUMANITIES</div>
-        <div class="cover-rule"></div>
-        <p>Academic Research · Culture · Philosophy · Literature · History · Art</p>
-        <p style="margin-top:18px">August 2026</p>
-      </div>
+  </details>
+  <details class="month-group">
+    <summary><span><strong>August 2026</strong><small>August issue · Volume 1</small></span><span class="month-count">2 articles <b>⌄</b></span></summary>
+    <div class="month-articles">
+      <article><span class="month-type">Research article</span><a href="#articles">Community heritage and sustainable tourism development</a><small>21 August 2026 · Sample article</small></article>
+      <article><span class="month-type">Research article</span><a href="#articles">Digital literacy and student engagement in higher education</a><small>07 August 2026 · Sample article</small></article>
     </div>
-  </div>
+  </details>
+  <p class="monthly-note">The archive currently contains demonstration entries. Published articles and their metadata will be populated from the journal database once the backend is connected.</p>
 </section>
 
-<section class="section" id="issue">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="kicker">August 2026</div>
-        <h2>Current Issue</h2>
-      </div>
-      <a class="view" href="#archives">View all issues →</a>
-    </div>
-
-    <div class="issue-info">
-      <div><span>Volume</span><strong>XII</strong></div>
-      <div><span>Issue</span><strong>8</strong></div>
-      <div><span>Publication</span><strong>August 2026</strong></div>
-      <div><span>Access</span><strong>Open Access</strong></div>
-    </div>
-
-    <div class="grid">
-
-      <article class="card">
-        <div class="thumb one"><span class="thumb-label">Philosophy</span></div>
-        <div class="card-body">
-          <div class="tag">Research Article</div>
-          <h3>The Ethics of Attention</h3>
-          <p>Exploring attention as an intellectual, ethical, and cultural practice in contemporary society.</p>
-          <div class="card-meta"><span>Author Name</span><span>pp. 1–14</span></div>
-          <a class="read" href="#" onclick="showMessage('Article page is ready for your PDF/link.')">Read Article →</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="thumb two"><span class="thumb-label">Literature</span></div>
-        <div class="card-body">
-          <div class="tag">Research Article</div>
-          <h3>Reading Between Eras</h3>
-          <p>A study of literary inheritance, forgotten texts, cultural memory, and changing interpretations.</p>
-          <div class="card-meta"><span>Author Name</span><span>pp. 15–28</span></div>
-          <a class="read" href="#" onclick="showMessage('Article page is ready for your PDF/link.')">Read Article →</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="thumb three"><span class="thumb-label">Art</span></div>
-        <div class="card-body">
-          <div class="tag">Research Article</div>
-          <h3>Fragments of the Human</h3>
-          <p>Modern visual culture and the changing language of identity, representation, and human experience.</p>
-          <div class="card-meta"><span>Author Name</span><span>pp. 29–43</span></div>
-          <a class="read" href="#" onclick="showMessage('Article page is ready for your PDF/link.')">Read Article →</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="thumb four"><span class="thumb-label">History</span></div>
-        <div class="card-body">
-          <div class="tag">Research Article</div>
-          <h3>Memory, Heritage and Place</h3>
-          <p>How historical landscapes and cultural heritage shape collective memory and identity.</p>
-          <div class="card-meta"><span>Author Name</span><span>pp. 44–59</span></div>
-          <a class="read" href="#" onclick="showMessage('Article page is ready for your PDF/link.')">Read Article →</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="thumb five"><span class="thumb-label">Society</span></div>
-        <div class="card-body">
-          <div class="tag">Research Article</div>
-          <h3>Humanities in a Changing World</h3>
-          <p>The role of humanities research in interpreting technological, social, and cultural transformation.</p>
-          <div class="card-meta"><span>Author Name</span><span>pp. 60–74</span></div>
-          <a class="read" href="#" onclick="showMessage('Article page is ready for your PDF/link.')">Read Article →</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="thumb six"><span class="thumb-label">Culture</span></div>
-        <div class="card-body">
-          <div class="tag">Review</div>
-          <h3>New Directions in Humanistic Studies</h3>
-          <p>A critical review of recent approaches to interdisciplinary humanities research.</p>
-          <div class="card-meta"><span>Author Name</span><span>pp. 75–84</span></div>
-          <a class="read" href="#" onclick="showMessage('Article page is ready for your PDF/link.')">Read Article →</a>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<section class="section dark-section" id="archives">
-  <div class="container archives">
-    <div class="archive-text">
-      <div class="kicker">Digital Edition</div>
-      <h2>Read the complete current issue.</h2>
-      <p>
-        Explore the full issue online or connect your own PDF and digital
-        reader links to this section. The layout is prepared for academic
-        publication archives and downloadable issues.
-      </p>
-      <div class="archive-links">
-        <a class="btn" style="background:#f5eee4;color:#302d29" href="#" onclick="showMessage('Connect your flipbook URL here.')">Open Digital Edition ↗</a>
-        <a class="btn light" style="color:#f5eee4;border-color:#6f675f" href="#" onclick="showMessage('Connect your issue PDF here.')">Download PDF</a>
-      </div>
-    </div>
-
-    <div>
-      <div class="issue-cover-large">
-        <small>JOURNAL OF AURA HUMANITAS</small>
-        <div class="big">AUGUST<br>2026</div>
-        <p style="font-size:10px;margin-top:30px">Volume XII · Issue 8</p>
-        <p style="font-size:9px">Humanities · Culture · Research</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="kicker">Publication History</div>
-        <h2>Archives</h2>
-      </div>
-      <span class="view">Browse by year</span>
-    </div>
-
-    <div class="archive-list">
-      <div class="archive-row">
-        <div><h3>Volume XII · 2026</h3><p>Issues 1–8 · Current publication year</p></div>
-        <span class="badge">2026</span>
-      </div>
-      <div class="archive-row">
-        <div><h3>Volume XI · 2025</h3><p>Previous annual volume</p></div>
-        <span class="badge">2025</span>
-      </div>
-      <div class="archive-row">
-        <div><h3>Volume X · 2024</h3><p>Previous annual volume</p></div>
-        <span class="badge">2024</span>
-      </div>
-      <div class="archive-row">
-        <div><h3>Volume IX · 2023</h3><p>Previous annual volume</p></div>
-        <span class="badge">2023</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="about">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="kicker">About the Journal</div>
-        <h2>A space for humanistic inquiry.</h2>
-      </div>
-    </div>
-
-    <div class="about-grid">
-      <div class="info-box">
-        <div class="tag">About Aura Humanitas</div>
-        <h3>Academic research with a humanistic perspective.</h3>
-        <p>
-          Aura Humanitas is an academic and popular humanities journal
-          designed to publish original research, scholarly essays, reviews,
-          and interdisciplinary studies concerned with human culture,
-          history, philosophy, literature, art, society, and related fields.
-        </p>
-      </div>
-
-      <div class="info-box">
-        <div class="tag">Scope & Areas</div>
-        <h3>Research fields</h3>
-        <div class="feature-list">
-          <div class="feature">History & Heritage</div>
-          <div class="feature">Philosophy</div>
-          <div class="feature">Literature</div>
-          <div class="feature">Art & Culture</div>
-          <div class="feature">Social Studies</div>
-          <div class="feature">Linguistics</div>
-          <div class="feature">Education</div>
-          <div class="feature">Interdisciplinary Studies</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="board">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="kicker">Academic Leadership</div>
-        <h2>Editorial Board</h2>
-      </div>
-    </div>
-
-    <div class="board-grid">
-      <div class="person">
-        <div class="avatar">EI</div>
-        <h3>Editor-in-Chief</h3>
-        <div class="role">Editor-in-Chief</div>
-        <p>Replace this text with the editor's full name, academic degree, affiliation, and research interests.</p>
-      </div>
-
-      <div class="person">
-        <div class="avatar">ME</div>
-        <h3>Managing Editor</h3>
-        <div class="role">Managing Editor</div>
-        <p>Replace this text with the managing editor's professional and institutional information.</p>
-      </div>
-
-      <div class="person">
-        <div class="avatar">EB</div>
-        <h3>Editorial Board</h3>
-        <div class="role">Board Member</div>
-        <p>Add scholars, affiliations, ORCID identifiers, and areas of expertise here.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="authors">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="kicker">For Researchers</div>
-        <h2>Author Guidelines</h2>
-      </div>
-    </div>
-
-    <div class="author-grid">
-      <div class="guideline">
-        <div class="number">01</div>
-        <div><h3>Manuscript Preparation</h3><p>Provide your manuscript requirements, formatting rules, abstract length, keywords, tables, figures, and references.</p></div>
-      </div>
-      <div class="guideline">
-        <div class="number">02</div>
-        <div><h3>Submission</h3><p>Add your manuscript submission email, online submission system, or editorial office instructions.</p></div>
-      </div>
-      <div class="guideline">
-        <div class="number">03</div>
-        <div><h3>Peer Review</h3><p>Describe your journal's peer-review model, reviewer selection, evaluation criteria, and decision process.</p></div>
-      </div>
-      <div class="guideline">
-        <div class="number">04</div>
-        <div><h3>Publication Ethics</h3><p>Add your policies on plagiarism, authorship, conflicts of interest, research integrity, and corrections.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="kicker">Identifiers & Visibility</div>
-        <h2>Indexing & Information</h2>
-      </div>
-    </div>
-
-    <div class="indexing">
-      <div class="index-pill">ISSN: —</div>
-      <div class="index-pill">DOI: —</div>
-      <div class="index-pill">ORCID</div>
-      <div class="index-pill">Crossref</div>
-      <div class="index-pill">Google Scholar</div>
-      <div class="index-pill">Open Access</div>
-      <div class="index-pill">Peer Reviewed</div>
-    </div>
-  </div>
-</section>
-
-<section class="newsletter">
-  <div class="container">
-    <div class="news-card">
-      <div class="kicker">Stay Connected</div>
-      <h2>New research, once a month.</h2>
-      <p>
-        Receive new issue announcements, selected articles, calls for papers,
-        and editorial updates from Aura Humanitas.
-      </p>
-      <form class="form" onsubmit="subscribe(event)">
-        <input id="email" type="email" placeholder="Your email address" required>
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
-  </div>
-</section>
-
+<div class="info-grid">
+<section class="info-panel" id="about"><h2 class="section-title">About the Journal</h2><p class="about-copy">Journal of Aura Humanitas is an international, peer-reviewed, open-access journal managed by an independent editorial team. It welcomes high-quality original research, review articles and short communications across the humanities, social sciences, education and related fields.</p><p class="about-copy">The journal aims to support responsible scholarship, interdisciplinary dialogue and the exchange of ideas across regions and research communities.</p><a class="small-btn" href="#ethics">More about the journal →</a></section>
+<section class="info-panel" id="editors"><h2 class="section-title">Editor-in-Chief</h2><div class="editor-profile"><div class="avatar" aria-label="Editor profile placeholder">JAH</div><div><strong>Editor-in-Chief</strong><p>Editorial leadership<br>Independent Academic Journal<br>Uzbekistan</p></div></div><a class="editor-link" href="#contact">View editorial board →</a><p class="form-note">Editorial names and portraits can be added once confirmed by the journal.</p></section>
+<section class="info-panel" id="ethics"><h2 class="section-title">Announcements</h2><div class="news-list"><div class="news-item"><div class="news-date">14<br>OCT</div><div><strong>Call for Papers — Volume 1, Issue 1</strong><span>Authors are invited to prepare manuscripts for the inaugural issue.</span></div></div><div class="news-item"><div class="news-date">02<br>SEP</div><div><strong>DOI registration planned</strong><span>DOIs will be displayed after official registration and metadata deposit.</span></div></div><div class="news-item"><div class="news-date">18<br>AUG</div><div><strong>Editorial board announcements</strong><span>Editorial information will be published after confirmation.</span></div></div></div><a class="editor-link" href="#contact">View all announcements →</a></section>
+</div>
 </main>
-
-<footer>
-  <div class="container footer">
-    <div>
-      <div class="logo">Aura Humanitas</div>
-      <p>Journal of academic and popular humanities.</p>
-      <p>ISSN: — · DOI: —</p>
-    </div>
-
-    <div>
-      <h4>Journal</h4>
-      <div class="footer-links">
-        <a href="#about">About the Journal</a>
-        <a href="#issue">Current Issue</a>
-        <a href="#archives">Archives</a>
-        <a href="#board">Editorial Board</a>
-      </div>
-    </div>
-
-    <div>
-      <h4>For Authors</h4>
-      <div class="footer-links">
-        <a href="#authors">Author Guidelines</a>
-        <a href="#">Publication Ethics</a>
-        <a href="#">Contact Editorial Office</a>
-        <a href="#">Submit Manuscript</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="container copyright">
-    <span>© 2026 Journal of Aura Humanitas. All rights reserved.</span>
-    <span>Academic · Humanities · Research</span>
-  </div>
-</footer>
-
-<div class="toast" id="toast"></div>
-
+<section class="newsletter"><div class="container newsletter-row"><div><h3>Research updates, delivered to your inbox</h3><p>Receive new issue announcements and calls for papers from Journal of Aura Humanitas.</p></div><form class="newsletter-form" id="newsletterForm"><input type="email" required placeholder="Your email address" aria-label="Email address"><button class="btn btn-gold" type="submit">Subscribe</button></form></div></section>
+<footer id="contact"><div class="container footer-main">
+<div class="footer-brand"><a class="brand" href="#top"><div class="brand-mark"><svg viewBox="0 0 64 64" fill="none"><path d="M32 7v48M32 13C22 6 17 7 12 12c7 1 13 5 20 15M32 21C20 14 13 17 8 23c9 0 17 5 24 15M32 29C19 24 11 29 8 36c10-2 18 3 24 10M32 13c10-7 15-6 20-1-7 1-13 5-20 15M32 21c12-7 19-4 24 2-9 0-17 5-24 15M32 29c13-5 21 0 24 7-10-2-18 3-24 10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></div><div><div class="brand-name">Journal of<br>AURA HUMANITAS</div><div class="brand-sub">Independent Academic Journal</div></div></a><p>Academic Research · Human Values · Global Perspectives</p><div class="socials"><a href="#contact" aria-label="Facebook">f</a><a href="#contact" aria-label="X">𝕏</a><a href="#contact" aria-label="LinkedIn">in</a><a href="#contact" aria-label="YouTube">▶</a></div><div class="doi-badges"><span class="doi-badge">Crossref · planned</span><span class="doi-badge">OPEN ACCESS</span><span class="doi-badge gold">DOI · pending</span></div></div>
+<div class="footer-col" id="authors"><h4>For Authors</h4><a href="#authors" data-demo="Author guidelines">Author Guidelines</a><a href="#" data-modal="submit">Submit your article</a><a href="#authors" data-demo="Track submission">Track your submission</a><a href="#ethics">Publication Ethics</a><a href="#ethics">Open Access Policy</a></div>
+<div class="footer-col" id="reviewers"><h4>For Reviewers</h4><a href="#reviewers" data-demo="Reviewer guidelines">Reviewer Guidelines</a><a href="#reviewers" data-demo="Peer review process">Peer Review Process</a><a href="#reviewers" data-demo="Reviewer recognition">Reviewer Recognition</a><a href="#contact">Become a Reviewer</a></div>
+<div class="footer-col"><h4>For Editors</h4><a href="#editors">Editorial Board</a><a href="#about">Aims and Scope</a><a href="#ethics">Journal Policies</a><a href="#ethics">Ethics &amp; Policies</a></div>
+<div class="footer-col"><h4>Helpful Links</h4><a href="#articles">Browse Articles</a><a href="#contact">Contact and Support</a><a href="#faq">Frequently Asked Questions</a><a href="#top">Back to top ↑</a><p style="font-size:10px;color:#6c7e91">ISSN (Online): Pending<br>e-ISSN: Pending</p></div>
+</div><div class="container footer-bottom"><span>© 2026 Journal of Aura Humanitas. Prototype concept. All rights reserved.</span><div class="policy"><a href="#ethics">Terms and conditions</a><a href="#ethics">Privacy policy</a><a href="#ethics">Publication ethics</a></div></div></footer>
+<div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><div class="modal-head"><h2 id="modalTitle">Sign in</h2><button class="close" id="closeModal" aria-label="Close">×</button></div><div class="modal-body" id="modalBody"></div></div></div><div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
-function showMessage(message){
-  event && event.preventDefault();
-  const toast=document.getElementById("toast");
-  toast.textContent=message;
-  toast.classList.add("show");
-  setTimeout(()=>toast.classList.remove("show"),2800);
+const $=(s,root=document)=>root.querySelector(s), $$=(s,root=document)=>[...root.querySelectorAll(s)];
+const backdrop=$('#modalBackdrop'),modalTitle=$('#modalTitle'),modalBody=$('#modalBody'),toast=$('#toast');
+let toastTimer;
+function notify(message){toast.textContent=message;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),3600)}
+function showModal(type){
+ backdrop.classList.add('open');
+ if(type==='submit'){
+  modalTitle.textContent='Submit your article';
+  modalBody.innerHTML=`<form id="submitForm"><div class="form-row"><label for="paperTitle">Manuscript title *</label><input id="paperTitle" required placeholder="Enter the full article title"></div><div class="form-row"><label for="paperAuthor">Corresponding author *</label><input id="paperAuthor" required placeholder="Full name"></div><div class="form-row"><label for="paperEmail">Email address *</label><input id="paperEmail" type="email" required placeholder="name@example.com"></div><div class="form-row"><label for="paperField">Research field *</label><select id="paperField" required><option value="">Choose a field</option><option>Humanities and Culture</option><option>Social Sciences</option><option>Education</option><option>Language and Literature</option><option>Economics and Management</option><option>Law and Governance</option><option>Interdisciplinary Research</option><option>Other</option></select></div><div class="form-row"><label for="paperAbstract">Short abstract</label><textarea id="paperAbstract" placeholder="Briefly describe the purpose and findings of your research"></textarea></div><div class="form-row"><label for="paperFile">Manuscript file (prototype only)</label><input id="paperFile" type="file" accept=".pdf,.doc,.docx"></div><button class="form-submit" type="submit">Continue submission</button><p class="form-note">Prototype demo: this form does not upload files to a server or submit a real manuscript. A secure backend and editorial workflow must be connected before public use.</p></form>`;
+  $('#submitForm').addEventListener('submit',e=>{e.preventDefault();backdrop.classList.remove('open');notify('Demo only: submission form validated. Connect a backend to receive manuscripts securely.')});
+ }else{
+  modalTitle.textContent='Sign in to your account';
+  modalBody.innerHTML=`<form id="signinForm"><div class="form-row"><label for="loginEmail">Email address</label><input id="loginEmail" type="email" required placeholder="you@example.com"></div><div class="form-row"><label for="loginPassword">Password</label><input id="loginPassword" type="password" required placeholder="Enter your password" minlength="6"></div><button class="form-submit" type="submit">Sign in</button><p class="form-note">Administrators and authors use the same sign-in page. User roles and secure authentication need to be configured in the production backend.</p></form><div class="switch-form">New to the journal? <button id="showRegister">Create an account</button></div>`;
+  $('#signinForm').addEventListener('submit',e=>{e.preventDefault();notify('Demo only: authentication is not connected yet.');backdrop.classList.remove('open')});
+  $('#showRegister').addEventListener('click',showRegister);
+ }
 }
-
-function subscribe(e){
-  e.preventDefault();
-  const email=document.getElementById("email").value;
-  showMessage("Thank you! Subscription recorded for "+email);
-  e.target.reset();
+function showRegister(){
+ modalTitle.textContent='Create your account';
+ modalBody.innerHTML=`<form id="registerForm"><div class="form-row"><label for="regName">Full name *</label><input id="regName" required placeholder="Your full name"></div><div class="form-row"><label for="regEmail">Institutional or personal email *</label><input id="regEmail" type="email" required placeholder="you@example.com"></div><div class="form-row"><label for="regRole">Account type *</label><select id="regRole" required><option value="author">Author / Researcher</option><option value="reviewer">Reviewer (request access)</option></select></div><div class="form-row"><label for="regPassword">Create password *</label><input id="regPassword" type="password" required minlength="8" placeholder="At least 8 characters"></div><button class="form-submit" type="submit">Create account</button><p class="form-note">Demo only: registration data is not stored. Production requires verified email, secure password handling and role-based access control.</p></form><div class="switch-form">Already registered? <button id="backToSignIn">Sign in</button></div>`;
+ $('#registerForm').addEventListener('submit',e=>{e.preventDefault();backdrop.classList.remove('open');notify('Demo only: registration form validated. Connect authentication to create accounts.')});
+ $('#backToSignIn').addEventListener('click',()=>showModal('signin'));
 }
-
-function toggleMenu(){
-  const nav=document.querySelector("nav");
-  nav.style.display = nav.style.display==="flex" ? "" : "flex";
-  nav.style.position="absolute";
-  nav.style.top="78px";
-  nav.style.left="0";
-  nav.style.right="0";
-  nav.style.padding="18px 4%";
-  nav.style.background="rgba(246,241,232,.98)";
-  nav.style.borderBottom="1px solid #ddd5c8";
-  nav.style.flexDirection="column";
-  nav.style.alignItems="flex-start";
+$$('[data-modal]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();showModal(el.dataset.modal)}));
+$('#closeModal').addEventListener('click',()=>backdrop.classList.remove('open'));
+backdrop.addEventListener('click',e=>{if(e.target===backdrop)backdrop.classList.remove('open')});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')backdrop.classList.remove('open')});
+$('#menuToggle').addEventListener('click',()=>$('#navLinks').classList.toggle('open'));
+$$('.nav-links a').forEach(a=>a.addEventListener('click',()=>$('#navLinks').classList.remove('open')));
+$$('.tab').forEach(tab=>tab.addEventListener('click',()=>{
+ $$('.tab').forEach(t=>{t.classList.remove('active');t.setAttribute('aria-selected','false')});
+ tab.classList.add('active');tab.setAttribute('aria-selected','true');
+ const filter=tab.dataset.filter;let visible=0;
+ $$('.article-card').forEach(card=>{const show=(card.dataset.categories||'').split(' ').includes(filter);card.style.display=show?'flex':'none';if(show)visible++});
+ if(!visible){$('#articleGrid').innerHTML='<div class="empty-state">No sample articles are assigned to this category yet. Add article records in the journal admin system.</div>'}
+ else if(!$('#articleGrid .article-card')){notify('Category view updated. Reload the page to restore the sample cards.')}
+}));
+$('#openSearch').addEventListener('click',()=>{$('#searchBox').classList.toggle('open');if($('#searchBox').classList.contains('open'))$('#searchInput').focus()});
+function searchArticles(){
+ const q=$('#searchInput').value.trim().toLowerCase();let found=0;
+ $$('.tab').forEach(t=>{t.classList.remove('active');t.setAttribute('aria-selected','false')});
+ $$('.article-card').forEach(card=>{const match=!q||card.textContent.toLowerCase().includes(q);card.style.display=match?'flex':'none';if(match)found++});
+ $('#articleGrid').scrollIntoView({behavior:'smooth',block:'start'});
+ notify(q?(found?`${found} article(s) match your search.`:'No matching sample articles found.'):'Showing all sample articles.');
 }
-
-document.getElementById("searchInput").addEventListener("keyup",function(){
-  const term=this.value.toLowerCase().trim();
-  document.querySelectorAll(".card").forEach(card=>{
-    card.style.display=card.innerText.toLowerCase().includes(term) ? "" : "none";
-  });
-});
+$('#searchButton').addEventListener('click',searchArticles);
+$('#searchInput').addEventListener('keydown',e=>{if(e.key==='Enter')searchArticles()});
+$$('[data-demo]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();notify(`${a.dataset.demo}: this section is a prototype placeholder and can be developed next.`)}));
+$('#newsletterForm').addEventListener('submit',e=>{e.preventDefault();notify('Thank you! Newsletter subscription is a demo and is not stored yet.');e.target.reset()});
+$('#viewAll').addEventListener('click',e=>{e.preventDefault();$('#searchInput').value='';$$('.article-card').forEach(c=>c.style.display='flex');$$('.tab').forEach(t=>{t.classList.remove('active');t.setAttribute('aria-selected','false')});$$('.tab')[0].classList.add('active');$$('.tab')[0].setAttribute('aria-selected','true');notify('Showing all sample articles.')});
 </script>
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="config.js"></script>
-<script src="live_public.js"></script>
 </body>
 </html>
