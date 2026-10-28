@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Journal of Aura Humanitas — multidisciplinary academic research, human values and global perspectives.">
 <title>Journal of Aura Humanitas | Academic Research</title>
+<!-- Before deployment, replace PASTE_YOUR_SB_PUBLISHABLE_KEY_HERE with the project's sb_publishable_ key. Never use a secret/service_role key. -->
 <style>
 :root{--navy:#082c59;--navy2:#06477f;--blue:#0877cf;--blue2:#eaf4fc;--gold:#d9a52e;--gold2:#f4c95d;--ink:#14243a;--muted:#627186;--line:#dce5ee;--paper:#fff;--wash:#f5f8fb;--green:#269b57;--shadow:0 12px 32px rgba(8,44,89,.10)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.55}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}.container{width:min(1240px,calc(100% - 48px));margin:auto}
@@ -111,31 +112,64 @@ footer{background:#eaf3fb;border-top:1px solid #d5e5f3}.footer-main{display:grid
 <div class="footer-col"><h4>Helpful Links</h4><a href="#articles">Browse Articles</a><a href="#contact">Contact and Support</a><a href="#faq">Frequently Asked Questions</a><a href="#top">Back to top ↑</a><p style="font-size:10px;color:#6c7e91">ISSN (Online): Pending<br>e-ISSN: Pending</p></div>
 </div><div class="container footer-bottom"><span>© 2026 Journal of Aura Humanitas. Prototype concept. All rights reserved.</span><div class="policy"><a href="#ethics">Terms and conditions</a><a href="#ethics">Privacy policy</a><a href="#ethics">Publication ethics</a></div></div></footer>
 <div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><div class="modal-head"><h2 id="modalTitle">Sign in</h2><button class="close" id="closeModal" aria-label="Close">×</button></div><div class="modal-body" id="modalBody"></div></div></div><div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 const $=(s,root=document)=>root.querySelector(s), $$=(s,root=document)=>[...root.querySelectorAll(s)];
 const backdrop=$('#modalBackdrop'),modalTitle=$('#modalTitle'),modalBody=$('#modalBody'),toast=$('#toast');
 let toastTimer;
 function notify(message){toast.textContent=message;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),3600)}
+// Supabase connection settings. Paste your Publishable key below; never use a secret/service_role key here.
+const SUPABASE_URL = 'https://cuxlslxvxriinqzfjydkr.supabase.co';
+const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_6bSAvb7St3v5jFIzDk_q9g_QtqHJlrS';
+const supabaseReady = !!(window.supabase && SUPABASE_PUBLISHABLE_KEY.startsWith('sb_publishable_'));
+const supabaseClient = supabaseReady ? window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY) : null;
+let currentUser = null;
+
+async function refreshAuthState(){
+  if(!supabaseClient) return;
+  const {data:{session}} = await supabaseClient.auth.getSession();
+  currentUser = session?.user || null;
+  document.querySelectorAll('[data-modal="signin"]').forEach(btn=>{
+    if(currentUser){ btn.dataset.modal='account'; btn.setAttribute('aria-label','My account'); }
+    else { btn.dataset.modal='signin'; }
+  });
+  const signBtn=$('.sign-in');
+  if(signBtn) signBtn.innerHTML = currentUser ? 'Sign out' : '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 17l5-5-5-5M15 12H3"/><path d="M12 3h7a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-7"/></svg> Sign in';
+}
 function showModal(type){
  backdrop.classList.add('open');
  if(type==='submit'){
   modalTitle.textContent='Submit your article';
-  modalBody.innerHTML=`<form id="submitForm"><div class="form-row"><label for="paperTitle">Manuscript title *</label><input id="paperTitle" required placeholder="Enter the full article title"></div><div class="form-row"><label for="paperAuthor">Corresponding author *</label><input id="paperAuthor" required placeholder="Full name"></div><div class="form-row"><label for="paperEmail">Email address *</label><input id="paperEmail" type="email" required placeholder="name@example.com"></div><div class="form-row"><label for="paperField">Research field *</label><select id="paperField" required><option value="">Choose a field</option><option>Humanities and Culture</option><option>Social Sciences</option><option>Education</option><option>Language and Literature</option><option>Economics and Management</option><option>Law and Governance</option><option>Interdisciplinary Research</option><option>Other</option></select></div><div class="form-row"><label for="paperAbstract">Short abstract</label><textarea id="paperAbstract" placeholder="Briefly describe the purpose and findings of your research"></textarea></div><div class="form-row"><label for="paperFile">Manuscript file (prototype only)</label><input id="paperFile" type="file" accept=".pdf,.doc,.docx"></div><button class="form-submit" type="submit">Continue submission</button><p class="form-note">Prototype demo: this form does not upload files to a server or submit a real manuscript. A secure backend and editorial workflow must be connected before public use.</p></form>`;
-  $('#submitForm').addEventListener('submit',e=>{e.preventDefault();backdrop.classList.remove('open');notify('Demo only: submission form validated. Connect a backend to receive manuscripts securely.')});
+  modalBody.innerHTML=`<form id="submitForm"><div class="form-row"><label for="paperTitle">Manuscript title *</label><input id="paperTitle" required placeholder="Enter the full article title"></div><div class="form-row"><label for="paperField">Research field *</label><select id="paperField" required><option value="">Choose a field</option><option>Humanities and Culture</option><option>Social Sciences</option><option>Education</option><option>Language and Literature</option><option>Economics and Management</option><option>Law and Governance</option><option>Interdisciplinary Research</option><option>Other</option></select></div><div class="form-row"><label for="paperAbstract">Abstract *</label><textarea id="paperAbstract" required minlength="30" placeholder="Briefly describe the purpose, methods and findings of your research"></textarea></div><div class="form-row"><label for="paperKeywords">Keywords (comma-separated)</label><input id="paperKeywords" placeholder="education, culture, research"></div><div class="form-row"><label for="paperLanguage">Article language</label><select id="paperLanguage"><option value="en">English</option><option value="uz">Uzbek</option><option value="ru">Russian</option></select></div><button class="form-submit" type="submit">Submit manuscript details</button><p class="form-note">You must sign in first. This step stores manuscript details only; secure PDF/DOCX upload will be enabled separately after Storage is configured.</p></form>`;
+  $('#submitForm').addEventListener('submit', async e=>{
+    e.preventDefault();
+    if(!supabaseClient){notify('Supabase key is not configured in index.html yet.');return;}
+    const {data:{user},error:authError}=await supabaseClient.auth.getUser();
+    if(authError || !user){notify('Please sign in before submitting an article.');showModal('signin');return;}
+    const title=$('#paperTitle').value.trim(), field=$('#paperField').value, abstract=$('#paperAbstract').value.trim();
+    const keywords=$('#paperKeywords').value.split(',').map(x=>x.trim()).filter(Boolean);
+    const {error}=await supabaseClient.from('articles').insert({author_id:user.id,title,abstract,keywords,research_field:field,language:$('#paperLanguage').value,status:'submitted'});
+    if(error){notify('Submission failed: '+error.message);return;}
+    backdrop.classList.remove('open');notify('Article details submitted successfully. The editorial team can now review the submission.');
+  });
+ }else if(type==='account'){
+  modalTitle.textContent='My account';
+  modalBody.innerHTML=`<p class="about-copy">Signed in as <strong>${currentUser?.email || ''}</strong></p><button class="form-submit" id="signOutBtn" type="button">Sign out</button><p class="form-note">Editorial permissions are assigned separately by the journal administrator.</p>`;
+  $('#signOutBtn').addEventListener('click',async()=>{const {error}=await supabaseClient.auth.signOut();if(error){notify(error.message);return;}currentUser=null;backdrop.classList.remove('open');await refreshAuthState();notify('You have signed out.');});
  }else{
   modalTitle.textContent='Sign in to your account';
-  modalBody.innerHTML=`<form id="signinForm"><div class="form-row"><label for="loginEmail">Email address</label><input id="loginEmail" type="email" required placeholder="you@example.com"></div><div class="form-row"><label for="loginPassword">Password</label><input id="loginPassword" type="password" required placeholder="Enter your password" minlength="6"></div><button class="form-submit" type="submit">Sign in</button><p class="form-note">Administrators and authors use the same sign-in page. User roles and secure authentication need to be configured in the production backend.</p></form><div class="switch-form">New to the journal? <button id="showRegister">Create an account</button></div>`;
-  $('#signinForm').addEventListener('submit',e=>{e.preventDefault();notify('Demo only: authentication is not connected yet.');backdrop.classList.remove('open')});
+  modalBody.innerHTML=`<form id="signinForm"><div class="form-row"><label for="loginEmail">Email address</label><input id="loginEmail" type="email" required placeholder="you@example.com"></div><div class="form-row"><label for="loginPassword">Password</label><input id="loginPassword" type="password" required placeholder="Enter your password" minlength="8"></div><button class="form-submit" type="submit">Sign in</button><p class="form-note">Authors, reviewers and editors use the same sign-in page. Editorial roles are assigned by the administrator.</p></form><div class="switch-form">New to the journal? <button id="showRegister" type="button">Create an account</button></div>`;
+  $('#signinForm').addEventListener('submit',async e=>{e.preventDefault();if(!supabaseClient){notify('Add your Supabase Publishable key to index.html first.');return;}const {error}=await supabaseClient.auth.signInWithPassword({email:$('#loginEmail').value.trim(),password:$('#loginPassword').value});if(error){notify(error.message);return;}backdrop.classList.remove('open');await refreshAuthState();notify('Signed in successfully.');});
   $('#showRegister').addEventListener('click',showRegister);
  }
 }
 function showRegister(){
  modalTitle.textContent='Create your account';
- modalBody.innerHTML=`<form id="registerForm"><div class="form-row"><label for="regName">Full name *</label><input id="regName" required placeholder="Your full name"></div><div class="form-row"><label for="regEmail">Institutional or personal email *</label><input id="regEmail" type="email" required placeholder="you@example.com"></div><div class="form-row"><label for="regRole">Account type *</label><select id="regRole" required><option value="author">Author / Researcher</option><option value="reviewer">Reviewer (request access)</option></select></div><div class="form-row"><label for="regPassword">Create password *</label><input id="regPassword" type="password" required minlength="8" placeholder="At least 8 characters"></div><button class="form-submit" type="submit">Create account</button><p class="form-note">Demo only: registration data is not stored. Production requires verified email, secure password handling and role-based access control.</p></form><div class="switch-form">Already registered? <button id="backToSignIn">Sign in</button></div>`;
- $('#registerForm').addEventListener('submit',e=>{e.preventDefault();backdrop.classList.remove('open');notify('Demo only: registration form validated. Connect authentication to create accounts.')});
+ modalBody.innerHTML=`<form id="registerForm"><div class="form-row"><label for="regName">Full name *</label><input id="regName" required placeholder="Your full name"></div><div class="form-row"><label for="regAffiliation">Institution / affiliation</label><input id="regAffiliation" placeholder="University or organization (optional)"></div><div class="form-row"><label for="regEmail">Email address *</label><input id="regEmail" type="email" required placeholder="you@example.com"></div><div class="form-row"><label for="regPassword">Create password *</label><input id="regPassword" type="password" required minlength="8" placeholder="At least 8 characters"></div><button class="form-submit" type="submit">Create account</button><p class="form-note">A verification email may be sent. New accounts are created as authors; reviewer/editor/admin access must be granted separately.</p></form><div class="switch-form">Already registered? <button id="backToSignIn" type="button">Sign in</button></div>`;
+ $('#registerForm').addEventListener('submit',async e=>{e.preventDefault();if(!supabaseClient){notify('Add your Supabase Publishable key to index.html first.');return;}const full_name=$('#regName').value.trim(),affiliation=$('#regAffiliation').value.trim();const {data,error}=await supabaseClient.auth.signUp({email:$('#regEmail').value.trim(),password:$('#regPassword').value,options:{data:{full_name,affiliation}}});if(error){notify(error.message);return;}backdrop.classList.remove('open');notify(data.session?'Account created and signed in.':'Account created. Check your email to confirm registration.');await refreshAuthState();});
  $('#backToSignIn').addEventListener('click',()=>showModal('signin'));
 }
-$$('[data-modal]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();showModal(el.dataset.modal)}));
+$$('[data-modal]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();if(el.classList.contains('sign-in') && currentUser){supabaseClient?.auth.signOut().then(async()=>{currentUser=null;await refreshAuthState();notify('You have signed out.');});return;}showModal(el.dataset.modal)}));
 $('#closeModal').addEventListener('click',()=>backdrop.classList.remove('open'));
 backdrop.addEventListener('click',e=>{if(e.target===backdrop)backdrop.classList.remove('open')});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')backdrop.classList.remove('open')});
@@ -160,8 +194,10 @@ function searchArticles(){
 $('#searchButton').addEventListener('click',searchArticles);
 $('#searchInput').addEventListener('keydown',e=>{if(e.key==='Enter')searchArticles()});
 $$('[data-demo]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();notify(`${a.dataset.demo}: this section is a prototype placeholder and can be developed next.`)}));
-$('#newsletterForm').addEventListener('submit',e=>{e.preventDefault();notify('Thank you! Newsletter subscription is a demo and is not stored yet.');e.target.reset()});
+$('#newsletterForm').addEventListener('submit',e=>{e.preventDefault();notify('Newsletter subscription will be enabled in a later step.');e.target.reset()});
 $('#viewAll').addEventListener('click',e=>{e.preventDefault();$('#searchInput').value='';$$('.article-card').forEach(c=>c.style.display='flex');$$('.tab').forEach(t=>{t.classList.remove('active');t.setAttribute('aria-selected','false')});$$('.tab')[0].classList.add('active');$$('.tab')[0].setAttribute('aria-selected','true');notify('Showing all sample articles.')});
+if(!supabaseReady){console.warn('Set SUPABASE_PUBLISHABLE_KEY in index.html to enable authentication.');}
+if(supabaseClient){refreshAuthState();supabaseClient.auth.onAuthStateChange(()=>refreshAuthState());}
 </script>
 </body>
 </html>
